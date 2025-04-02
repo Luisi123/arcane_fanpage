@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arcane - League of Legends</title>
+    <meta name="description" content="Fan site for the Arcane animated series" />
+    <meta name="author" content="Arcane Fan" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="backgroundContainer">
+        <video id="backgroundVideo" autoplay muted loop>
+            <source src="img/jinxx.mp4" type="video/mp4">
+        </video>
+        <audio id="backgroundMusic" class="bgm" src="img/music.mp3" loop></audio>
+    </div>
+
+    <header>
+      <div class="logo-container">
+        <img
+          alt="Logo"
+          class="logo"
+          src="img\Arcane-Logo.png"
+        />
+      </div>
+      
+      <button id="musicBtn">🔇</button>
+      
+      <div class="right_menu">
+        <a class="right_text" href="#">about</a>
+        <a class="right_text" href="#">characters</a>
+        <a class="right_text" href="#">FAQ</a>
+        <a class="right_text" href="#">Contact</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="hero-text">
+        <h1 id="Welcome">Welcome to the Arcane show</h1>
+        <p id="intro">
+          Arcane is a visually stunning animated series set in the universe of League of Legends, exploring the conflict between the utopian city of Piltover and the oppressed underground of Zaun. It follows the tragic story of two sisters, Vi and Jinx, whose bond is shattered by war, political intrigue, and the rise of dangerous technology. With breathtaking animation, deep character development, and an emotional narrative, Arcane has been widely praised as one of the best video game adaptations ever made.
+        </p>
+        <div id="btn1">
+            <a href="https://youtu.be/dQw4w9WgXcQ"><button id="dosmth">Watch Now</button></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img 
+          id="ekko" 
+          src="img\ekko.png" 
+          alt="Arcane character" 
+        />
+      </div>
+    </div>
+
+
+    <div class="info-section">
+      <div class="info-container">
+        <h2 class="info-title">
+          Some things related to Arcane show!!!
+        </h2>
+        
+        <div class="card-grid">
+          <div class="card">
+            <a class="linkI" href="#">
+              <img 
+                class="card-image" 
+                src="img\images.jpeg" 
+                alt="Arcane content"
+              />
+            </a>
+            <div class="card-text">Characters</div>
+          </div>
+          
+          <div class="fanartContainer card">
+            <a class="linkI" href="#">
+              <img 
+                class="fanartImage card-image" 
+                src="img\fanart.png" 
+                alt="Arcane fanart"
+              />
+            </a>
+            <div class="fanartSubtext card-text">Fanart!</div>
+          </div>
+          
+          <div class="musicContainer card">
+            <a class="linkI" href="#">
+              <img
+                class="musicVideo card-image"
+                src="img\jinxeko.jpeg"
+                alt="Music playlist"
+              />
+            </a>
+            <div class="musicSubtext card-text">Playlist!</div>
+          </div>
+          
+          <div class="heyMisterContainer card">
+            <a class="linkI" href="#">
+              <img 
+                class="heyMisterImage card-image" 
+                src="img\interesting.webp" 
+                alt="Interesting stuff"
+              />
+            </a>
+            <div class="heyMisterSubtext card-text">
+              Interesting... <span class="stuff">"stuff"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-section">
+      <div class="quote-container">
+        <blockquote class="quote-text">
+          <p>
+            "In this world, it's the rich and powerful who make the rules, and people like us who suffer under them. The enemy's hatred is a weapon. It's a tool."
+          </p>
+          <cite class="quote-author">
+            - Silco, Arcane
+          </cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <div class="cta-container">
+        <div class="cta-text">
+          <h3>Join the Arcane Community!</h3>
+          <p>Stay updated on news, fan art, and upcoming seasons</p>
+        </div>
+        <button class="cta-button">
+          Sign up
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <p class="footer-text">
+        Copyright © League of Legends: Arcane Fan Site 2023
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const audioElement = document.getElementById('backgroundMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        let isMusicPlaying = false;
+        
+        musicBtn.addEventListener('click', function() {
+          if (isMusicPlaying) {
+            audioElement.pause();
+            musicBtn.textContent = '🔇';
+          } else {
+            audioElement.play();
+            musicBtn.textContent = '🔊';
+          }
+          isMusicPlaying = !isMusicPlaying;
+        });
+      });
+    </script>
+  </body>
+</html>
